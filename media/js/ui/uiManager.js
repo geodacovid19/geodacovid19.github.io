@@ -185,7 +185,9 @@ var UIManager = (function(window, csrftoken, $, MsgBox ){
 
     $(window).resize(function() {
       $('#layer-tree, .tool-menu').hide();
-      //$('#dialog-open-file').dialog("option","position","center");
+      setTimeout(function() {
+        $('#dialog-open-file').dialog("option", "position", "center");
+      }, 200);
     });
 
     var local_map_names_sel = {
